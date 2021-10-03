@@ -1,0 +1,71 @@
+@use "abstracts/variables" as *;
+
+.navbar {
+  @media only screen and (max-width: 600px) {
+    display: none;
+    background-color: #fff;
+    color: $clr-neutral-grey;
+    border-radius: 1rem;
+
+    position: absolute;
+    top: 10rem;
+    width: 90%;
+    z-index: 999;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    // background-color: black;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      padding: 3rem;
+    }
+
+    &:not(:last-child) {
+      @media only screen and (max-width: 600px) {
+        border-bottom: 1px solid $clr-neutral-grey-light;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+      opacity: 0.8;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: black;
+    }
+  }
+}
+
+#nav-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.open {
+  display: initial;
+}

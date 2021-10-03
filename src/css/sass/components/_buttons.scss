@@ -1,0 +1,85 @@
+@use "abstracts/variables" as *;
+
+.btn {
+  cursor: pointer;
+  &--cyan {
+    background-color: $clr-primary-cyan;
+    color: #fff;
+    font-weight: 900;
+    border: none;
+    height: 6rem;
+    border-radius: 3rem;
+    padding: 0 4rem;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: darken($clr-primary-cyan, 20);
+    }
+  }
+
+  &--reward {
+    background-color: $clr-primary-cyan;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 3rem;
+    height: 4rem;
+    padding: 1rem 2.5rem;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: darken($clr-primary-cyan, 20);
+    }
+  }
+
+  &--fade {
+    cursor: auto;
+    background-color: $clr-neutral-grey-light;
+    color: rgb(102, 102, 102);
+    font-weight: 900;
+    border: none;
+    height: 6rem;
+    border-radius: 3rem;
+    padding: 0 4rem;
+  }
+}
+
+.bookmark {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background-color: $clr-neutral-grey-light;
+  color: $clr-neutral-grey;
+  font-weight: 900;
+  border: none;
+  height: 6rem;
+  border-radius: 3rem;
+  padding: 0 4rem 0 8rem;
+  font-size: 1.4rem;
+
+  @media only screen and (max-width: 600px) {
+    width: 6rem;
+    padding: 0 0 0 0;
+    font-size: 1px;
+  }
+
+  &__icon {
+    position: absolute;
+
+    left: 0rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &--active {
+    color: $clr-primary-cyan-dark;
+
+    #icon-circle {
+      fill: $clr-primary-cyan-dark;
+    }
+
+    #icon-path {
+      fill: #fff;
+    }
+  }
+}

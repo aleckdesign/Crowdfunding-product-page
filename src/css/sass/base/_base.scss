@@ -1,0 +1,30 @@
+@use "abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Commissioner", sans-serif;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 55%;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) 1fr minmax(min-content, 65rem) 1fr minmax(
+      2rem,
+      1fr
+    );
+  row-gap: 2rem;
+
+  background-color: rgb(241, 241, 241);
+}

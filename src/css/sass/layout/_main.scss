@@ -1,0 +1,198 @@
+@use "abstracts/variables" as *;
+
+.project {
+  grid-column: 3/4;
+  grid-row: 3/4;
+
+  background-color: #fff;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 1rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -10rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 6rem 2rem 4rem 2rem;
+    text-align: center;
+  }
+
+  &__logo {
+    position: absolute;
+    top: -2.5rem;
+  }
+
+  &__info {
+    margin-bottom: 4rem;
+  }
+
+  &__heading-main {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__heading-sub {
+    font-size: 1.6rem;
+  }
+
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.backers {
+  grid-column: 3/4;
+  grid-row: 4/5;
+
+  background-color: #fff;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 4rem 2rem;
+  }
+
+  &__top {
+    display: flex;
+    width: 100%;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    text-align: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid $clr-neutral-grey;
+
+      @media only screen and (max-width: 600px) {
+        border-right: none;
+        border-bottom: 1px solid $clr-neutral-grey;
+        padding-bottom: 2rem;
+      }
+    }
+    &:not(:first-child) {
+      padding-left: 4rem;
+      @media only screen and (max-width: 600px) {
+        padding-left: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  &__heading {
+    & span {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-top: 1rem;
+      color: $clr-neutral-grey;
+    }
+  }
+
+  &__bar {
+    height: 1.5rem;
+    width: 100%;
+    background-color: $clr-neutral-grey-light;
+    border-radius: 1.5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $clr-primary-cyan;
+      height: 100%;
+      width: 80%;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+.about {
+  grid-column: 3/4;
+  grid-row: 5/6;
+
+  background-color: #fff;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 1rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 10rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 4rem 2.5rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+}
+
+.reward {
+  padding: 3rem;
+  border: 1px solid $clr-neutral-grey-light;
+  border-radius: 1rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 3rem;
+    }
+  }
+
+  &__stock {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    & span {
+      font-size: 1.4rem;
+      color: $clr-neutral-grey;
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    height: 4rem;
+    padding: 1rem 2.5rem;
+
+    @media only screen and (max-width: 600px) {
+      height: 5rem;
+      padding: 0 4rem;
+    }
+  }
+}

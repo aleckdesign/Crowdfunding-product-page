@@ -1,0 +1,47 @@
+@use "abstracts/variables" as *;
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.complete {
+  background-color: #fff;
+  position: absolute;
+  padding: 4rem;
+  border-radius: 1rem;
+  width: 45rem;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 35rem;
+  }
+
+  &__icon {
+    width: 8rem;
+  }
+
+  &__heading {
+    margin-top: 4rem;
+    font-weight: 900;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

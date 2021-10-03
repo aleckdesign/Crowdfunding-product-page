@@ -1,0 +1,156 @@
+@use "abstracts/variables" as *;
+
+.select {
+  background-color: #fff;
+  position: absolute;
+  padding: 4rem;
+  border-radius: 1rem;
+  width: 80rem;
+  top: 15vh;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    width: 40rem;
+  }
+
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  &__close {
+    width: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__text {
+  }
+}
+
+.pledge {
+  border: 1px solid $clr-neutral-grey-light;
+  border-radius: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__box {
+    cursor: pointer;
+    padding: 3rem;
+  }
+
+  &__label {
+    width: 100%;
+    height: 10rem;
+  }
+
+  &__radio {
+    opacity: 0;
+    transition: all 1s ease;
+
+    &:checked ~ .pledge__check::after {
+      display: initial;
+    }
+  }
+
+  &__check {
+    position: absolute;
+    top: 2.5rem;
+    left: 1.8rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid $clr-neutral-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      background-color: $clr-primary-cyan;
+      display: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__amount {
+    display: inline;
+    font-weight: 700;
+    margin-left: 1rem;
+
+    & span {
+      margin-left: 1rem;
+      color: $clr-primary-cyan;
+
+      @media only screen and (max-width: 600px) {
+        display: block;
+        margin-left: 2.8rem;
+      }
+    }
+  }
+
+  &__remaining {
+    & span {
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: $clr-neutral-grey;
+    }
+  }
+
+  &__info {
+    margin-left: 2.5rem;
+  }
+
+  &--out {
+    &:hover {
+      transform: scale(1);
+      box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $clr-neutral-grey;
+  padding: 2rem;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__btn {
+    height: 4rem;
+    padding: 0 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

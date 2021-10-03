@@ -1,0 +1,33 @@
+@use "abstracts/variables" as *;
+
+.custom__amount {
+  border-radius: 3rem;
+  border: 1px solid $clr-primary-cyan;
+  width: 11rem;
+  padding: 0 1rem 0 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  &:focus {
+    outline: 3px solid $clr-primary-cyan;
+  }
+
+  &-box {
+    position: relative;
+    display: flex;
+
+    & span {
+      position: absolute;
+      font-size: 1.4rem;
+      font-family: "Commissioner", sans-serif;
+      font-weight: 700;
+      color: $clr-neutral-grey;
+      left: 2rem;
+      align-self: center;
+    }
+  }
+}
+
+.sr-only {
+  visibility: hidden;
+}

@@ -1,0 +1,42 @@
+@use "abstracts/variables" as *;
+
+.heading-1 {
+  font-size: 3rem;
+
+  &--fade {
+    color: $clr-neutral-grey;
+  }
+}
+
+.heading-2 {
+  font-size: 2rem;
+
+  &--fade {
+    color: $clr-neutral-grey;
+  }
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  color: $clr-primary-cyan;
+  font-weight: 500;
+
+  &--black {
+    color: black;
+  }
+
+  &--fade {
+    opacity: 0.5;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-top: 2rem;
+
+  &--fade {
+    color: $clr-neutral-grey;
+    opacity: 0.6;
+  }
+}
